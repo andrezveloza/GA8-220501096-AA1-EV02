@@ -1,0 +1,36 @@
+<div class="container">
+  <p>MODIFICAR EQUIPO</p>
+  <div class="row">
+      <div class="col-sm-6">
+          <form>
+              <div class="mb-3">
+                  <label class="form-label">Nombre de Equipo</label>
+                  <input [(ngModel)]="equipo.nombre" type="text" class="form-control" name="nombre">
+              </div>
+
+              <div class="mb-3">
+                  <label class="form-label">logo</label>
+                  <input [(ngModel)]="equipo.logo" type="text" class="form-control"   name="logo">
+              </div>
+              <button style="margin-right: 10px" routerLink="/inicio"  class="btn btn-dark">Regresar</button>
+              <button (click)="modificar()" class="btn btn-primary">Guardar</button>
+          </form>
+      </div>
+
+
+      <div class="col-sm-6">
+          <form>
+              <div class="mb-3">
+                  <img src="{{equipo.logo}}" width="150" height="auto" alt="">
+              </div>
+
+              <div class="mb-3">
+                  <label class="form-label" style="font-weight: bold; font-size: 15px;">{{equipo.nombre}}</label>
+              </div>
+
+          </form>
+      </div>
+
+  </div>
+
+</div>
